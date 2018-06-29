@@ -1,0 +1,16 @@
+{
+  "name": "quero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start --server src --files src"
+  },
+  "keywords": [],
+  "author": "Nathanael Reges Sousa",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.5"
+  },
+  "dependencies": {}
+}
