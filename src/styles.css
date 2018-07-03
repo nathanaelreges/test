@@ -479,3 +479,111 @@ section, article, aside, footer, header, nav {
     /**/
 
 /**/
+
+
+.grid-6{
+    background: rgb(23, 172, 196);
+}
+
+    .contact {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        height: 70px;
+        list-style: none;
+    }
+
+        .contact__item {
+            display: flex;
+            flex-grow: 1.5;
+            flex-shrink: 0;
+        }
+
+            .contact__item--phone {
+                flex-grow: 1;
+            }
+
+            .contact__link {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: white;
+                border-left: 1px solid rgb(19, 163, 189);
+            }
+
+                .contact__link--phone {
+                    flex-direction: row;
+                    border-left: none;
+                }
+
+                .contact__img {
+                    width:  25px;
+                    height: 25px;
+                    margin: 5px 5px 5px 0;
+                    background: darkgray;
+                    border-radius: 25px;
+                }
+
+                
+
+                .contact__text {
+                    transform: translateX(-0.5rem);/*ajusting to center text excluding the dot*/
+                    font-size: 0.88rem;
+                }
+
+                    .contact__text--phone {
+                        transform: none;
+                        display: flex;
+                        flex-direction: column;   
+                    }
+
+                        .contact__phone-under-text{
+                            font-size: 0.75rem;
+                            font-style: italic;
+                        }
+
+                    /**/
+
+                    .contact__text--chat {
+                        font-style: italic;
+                    }
+
+                    .contact__dot {
+                        vertical-align: baseline;
+                        display: inline-block;
+                        height: 0.6rem;
+                        width: 0.6rem;
+                        border-radius: 10px;
+                    }
+
+                        .contact__dot--phone {
+                            background: rgb(221,63,78);
+                            
+                        }
+                        
+                        .contact__dot--chat {
+                            background: rgb(221,63,78);
+                        }
+                        
+                        .contact__dot--email {
+                            background: rgb(101, 239, 128);
+                        }
+
+                        .contact__dot--info {
+                            background: rgb(101, 239, 128);
+                        }
+
+                    /**/
+
+                /**/
+
+            /**/
+
+        /**/
+
+    /**/
+
+/**/
