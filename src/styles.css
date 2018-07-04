@@ -17,16 +17,20 @@ section, article, aside, footer, header, nav {
 }
 
 
-.grid{
+.grid__box{
     padding: 0 15px;
 }
 
 
 .grid--header {
     box-shadow: 0 1px 10px 0 rgba(0,0,0,0.5);
-    position: relative;
-    padding: 0;/*unseting default padding to use padding inside the clickable element instead*/
+    position: relative;/*So the shadow casts on top of the lower element*/
 }
+
+.grid__box--header {
+    padding: 0;/*unseting default padding (applied through .grid__box) to use padding inside the clickable element instead*/
+}
+
     .header {
         display: flex;
         height: 60px;
@@ -68,6 +72,7 @@ section, article, aside, footer, header, nav {
                 .header__help-img {
                     height: 25px;
                     width: 25px;
+                    border-radius: 100%;
                     background-color: rgb(222, 158, 32);
                 }
 
@@ -75,12 +80,15 @@ section, article, aside, footer, header, nav {
                     height: 40px;
                     width: 130px;
                     padding: 0 10px;
+
+                    border-radius: 10px;
                     background-color: rgb(222, 158, 32);
                 }
                 
                 .header__login-img {
                     height: 25px;
                     width: 25px;
+                    border-radius: 100%;
                     background-color: rgb(222, 158, 32);
                 }
 
@@ -103,9 +111,11 @@ section, article, aside, footer, header, nav {
 .grid--topnav {
     background: rgb(14,153,176);
     box-shadow: inset 0 -10px 10px -9px rgba(0,0,0,0.5);
-    padding: 0;/*unseting default padding to use padding inside the clickable element instead*/
 }
 
+.grid__box--topnav {
+    padding: 0;/*unseting default padding (applied through .grid__box) to use padding inside the clickable element instead*/
+}
     .topnav {
         height: 45px;
         display: flex;
@@ -161,7 +171,6 @@ section, article, aside, footer, header, nav {
 .grid--guide-form {
     background: rgb(250,250,250);
     border-bottom: 1px solid lightgrey;
-    margin-bottom: 45px;
 }
 
     .guide {
@@ -354,7 +363,7 @@ section, article, aside, footer, header, nav {
 
 
 .share {
-    padding: 15px 0;
+    padding: 60px 0 15px 0;
 }
     .share__title {
         font-size: 1.4rem;
@@ -363,15 +372,15 @@ section, article, aside, footer, header, nav {
         margin: 0;
     }
 
-    .share__l-row {
+    .share__box {
         overflow: hidden;/*fix margin collapse*/
         padding-top: 25px;
         padding-bottom: 20px;
     }
 
-        .share__l-row--first {
+        .share__box--first {
             border-bottom: 1px solid lightgrey;
-            padding-top: 17px;
+            padding-top: 25px;
         }
 
         .share__title2 {
@@ -486,7 +495,10 @@ section, article, aside, footer, header, nav {
 
 .grid--contact{
     background: rgb(23, 172, 196);
-    padding: 0;
+}
+
+.grid__box--contact{
+    padding: 0;/*unseting default padding (applied through .grid__box) to use padding inside the clickable element instead*/
 }
 
     .contact {
@@ -602,10 +614,10 @@ section, article, aside, footer, header, nav {
 
 .grid--botnav {
     background: rgb(5, 134, 155);
-    text-align: center;
 }
 
     .botnav {
+        text-align: center;
         margin: 0;
         padding: 15px 0;
         font-size: 0.6rem;
@@ -739,34 +751,132 @@ section, article, aside, footer, header, nav {
 
 
 @media (max-width: 900px) {
-    .desktop {
-        display: block;
+    .if-desktop {
+        display: none   ;
     }
 }
 
 @media (min-width: 900px) {
-    .mobile {
-       /* display: none;*/
+    .if-mobile {
+        display: none;
     }
 
-    .desktop {
+    .if-desktop {
         display: block;
     }
 
-    .share{
-        max-width: 1010px;
-        margin: auto;
+
+    .grid__box{
+        max-width: 1015px;
+        margin: 0 auto;
+        
     }
 
-    .grid-4 {
+    /*GUIDE-FORM*/
+    .l-guide-form {
         display: flex;
-        justify-content: center;
     }
 
         .guide, .form {
-            max-width: 505px;
+            flex-basis: 50%;
+        }
+        
+        .form {
+            margin-left: 25px;
         }
 
     /**/
+
+    /*SHARE*/
+    .share__title {
+        padding-bottom: 15px;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .share__l-boxes {
+        display: flex;
+    }
+
+        .share__box {
+            flex-basis: 50%;
+        }
+
+        .share__box--first {
+            border-bottom: unset;
+        }
+        
+        .share__box--last {
+            margin-left: 25px;
+        }
+
+    /**/
+
+
+    /*HEADER*/
+
+    .header-d__l-link {
+        flex-basis: 40%;
+        display: flex;
+    }
+
+        .header-d__l-link--left {
+            margin-right: auto;
+        }
+
+        .header-d__l-link--right {
+            margin-left: auto;
+        }
+
+        .header-d__link {
+            flex-shrink: 0;
+            display: flex;
+            padding: 0 15px;
+            align-items: center;
+            justify-content: center;
+            color: dimgrey;
+            text-decoration: none;
+        }
+
+            .header-d__link--help {
+                border-right: 1px solid lightgray;
+            }   
+            
+            .header-d__link--login {
+                margin-left: auto;
+            } 
+
+            .header-d__help-img {
+                height: 25px;
+                width: 25px;
+                border-radius: 100%;
+                background-color: rgb(222, 158, 32);
+            }
+
+            .header-d__phone-img {
+                height: 25px;
+                width: 25px;
+                border-radius: 100%;
+                background-color: rgb(222, 158, 32);
+            }
+            
+            .header-d__login-img {
+                height: 25px;
+                width: 25px;
+                border-radius: 100%;
+                background-color: rgb(222, 158, 32);
+            }
+
+            .header-d__link-text {
+                padding: 0 5px;
+                font-size: 0.9rem;
+            }
+
+         
+        /**/
+
+    /**/
+
+
+
 
 }
