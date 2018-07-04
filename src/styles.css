@@ -753,7 +753,7 @@ section, article, aside, footer, header, nav {
         display: block;
     }
 
-    .grid-box{
+    .share{
         max-width: 1010px;
         margin: auto;
     }
