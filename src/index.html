@@ -16,7 +16,7 @@
 	<meta property="og:description" content="O Quero Bolsa tem Bolsas de Estudo com desconto de até 75% em mais de 1000 faculdades em todo o Brasil. Graduação e pós-graduação. Presencial e EAD.">
 	<meta property="og:type" content="site">
 
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css"/>
 
 
@@ -437,71 +437,133 @@
 
 		<nav class="grid grid--botnav">
 			<div class="grid__box grid__box--botnav">
-				<ul class="botnav">
-					<!--We are using white space trailing to get read of the line between links on each line end,
-						in order for this to work there can't be any white space here-->
-					<li class="botnav__item"><a class="botnav__link" href="">Central de Ajuda</a></li>
-					<li class="botnav__item"><a class="botnav__link" href="">Vs Educa Mais Brasil</a></li>
-					<li class="botnav__item"><a class="botnav__link" href="">Vs Mais Estudo</a></li>
-					<li class="botnav__item"><a class="botnav__link" href="">Mapa de Faculdades</a></li>
-					<li class="botnav__item"><a class="botnav__link" href="">Mapa de Cursos</a></li>
-					<li class="botnav__item"><a class="botnav__link" href="">Revista QB</a></li>
-					<li class="botnav__item"><a class="botnav__link" href="">Guia de Programas do Governo</a></li>
-					<li class="botnav__item"><a class="botnav__link" href="">Trabalhe Conosco</a></li>
-					<li class="botnav__item"><a class="botnav__link" href="">Imprensa</a></li>
-				</ul>
+				<!--mobile-->
+					<ul class="if-mobile botnav">
+						<!--We are using white space trailing to get rid of the line between links on each line end,
+							in order for this to work there can't be any white space inisde the li elements-->
+						<li class="botnav__item"><a class="botnav__link" href="">Central de Ajuda</a></li>
+						<li class="botnav__item"><a class="botnav__link" href="">Vs Educa Mais Brasil</a></li>
+						<li class="botnav__item"><a class="botnav__link" href="">Vs Mais Estudo</a></li>
+						<li class="botnav__item"><a class="botnav__link" href="">Mapa de Faculdades</a></li>
+						<li class="botnav__item"><a class="botnav__link" href="">Mapa de Cursos</a></li>
+						<li class="botnav__item"><a class="botnav__link" href="">Revista QB</a></li>
+						<li class="botnav__item"><a class="botnav__link" href="">Guia de Programas do Governo</a></li>
+						<li class="botnav__item"><a class="botnav__link" href="">Trabalhe Conosco</a></li>
+						<li class="botnav__item"><a class="botnav__link" href="">Imprensa</a></li>
+					</ul>
+				<!--desktop-->
+					<ul class="if-desktop botnav-d">
+						<li class="botnav-d__item-l1">
+							<ul class="botnav-d__list">
+								<h1 class="botnav-d__title">Encontre sua Bolsa</h1>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Busque por Faculdade</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Busque por Curso</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Mapa de Faculdades</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link botnav__link--last" href="">Mapa de Cursos</a></li>
+							</ul>
+						<li class="botnav-d__item-l1">
+							<ul class="botnav-d__list">
+								<h1 class="botnav-d__title">Central de Ajuda</h1>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Passo a Passo</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Perguntas Frequentes</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Vs Educa Mais Brasil</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link botnav__link--last" href="">Vs Mais Estudo/Neora</a></li>
+							</ul>
+						</li>
+						<li class="botnav-d__item-l1">
+							<ul class="botnav-d__list">
+								<h1 class="botnav-d__title">Programas do Governo</h1>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Notas de Corte</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Tudo sobre Prouni</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Tudo sobre Sisu</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link botnav__link--last" href="">Tudo sobre Fies</a></li>
+							</ul>
+						</li>
+						<li class="botnav-d__item-l1">
+							<ul class="botnav-d__list">
+								<h1 class="botnav-d__title">Revista QB</h1>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Vestibular e Enem</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Dicas e curiosidades</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Carreiras</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link botnav__link--last" href="">Universidades</a></li>
+							</ul>
+						</li>
+						<li class="botnav-d__item-l1">
+							<ul class="botnav-d__list">
+								<h1 class="botnav-d__title">Institucional</h1>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Trabalhe Conosco</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Para Faculdades</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Seja um Parceiro</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link botnav__link--last" href="">Imprensa</a></li>
+							</ul>
+						</li>
+						<li class="botnav-d__item-l1">
+							<ul class="botnav-d__list">
+								<h1 class="botnav-d__title">Dicas Quero Bolsa</h1>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Bolsa Ensino Básico</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link" href="">Serviços Parceiros</a></li>
+								<li class="botnav-d__item-l2"><a class="botnav-d__link botnav__link--last" href="">Quero Bolsa 100%</a></li>
+							</ul>
+						</li>
+					</ul>
+				<!---->
 			</div>
 		</nav>
 
-		<div class="grid grid--last">
-			<div class="grid__box grid__box--last">
-				<div class="security">
-					<div class="security__img security__img--safe-site" title="Site Seguro"></div>
-					<div class="security__img security__img--visa" title="Pague com Visa"></div>
-					<div class="security__img security__img--mastercard" title="Mastercard"></div>
-					<div class="security__img security__img--americanexpress" title="American Express"></div>
-					<div class="security__img security__img--elo" title="Elo"></div>
-					<div class="security__img security__img--bank-slip" title="Boleto Bancario"></div>
+		<!--mobile-->
+			<div class="grid grid--last">
+				<div class="grid__box grid__box--last">
+					<div class="security">
+						<div class="security__img security__img--safe-site" title="Site Seguro"></div>
+						<div class="security__img security__img--visa" title="Pague com Visa"></div>
+						<div class="security__img security__img--mastercard" title="Mastercard"></div>
+						<div class="security__img security__img--americanexpress" title="American Express"></div>
+						<div class="security__img security__img--elo" title="Elo"></div>
+						<div class="security__img security__img--bank-slip" title="Boleto Bancario"></div>
+					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="grid grid--last">
-			<div class="grid__box grid__box--last">
-				<nav class="social">
-					<ul class="social__list">
-						<li class="social__item">
-							<a class="social__link" title="Youtube da Quero" href="#youtube">
-								<div class="social__img social__img--youtube"></div>
-							</a>
-						</li>
-						<li class="social__item">
-							<a class="social__link" title="Instagram da Quero" href="#insta">
-								<div class="social__img social__img--insta"></div>
-							</a>
-						</li>
-						<li class="social__item">
-							<a class="social__link" title="Facebook da Quero" href="#face">
-								<div class="social__img social__img--face"></div>
-							</a>
-						</li>
-					</ul>
-				</nav>
+			<div class="grid grid--last">
+				<div class="grid__box grid__box--last">
+					<nav class="social">
+						<ul class="social__list">
+							<li class="social__item">
+								<a class="social__link" title="Youtube da Quero" href="#youtube">
+									<div class="social__img social__img--youtube"></div>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" title="Instagram da Quero" href="#insta">
+									<div class="social__img social__img--insta"></div>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" title="Facebook da Quero" href="#face">
+									<div class="social__img social__img--face"></div>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</div>
-		</div>
-		<div class="grid grid--last">
-			<div class="grid__box grid__box--last">
-				<p class="info">
-					<span class="info__text">
-						Feito com <span class="info__heart">&#10084;</span> pela Quero Educação
-					</span>
+			<div class="grid grid--last">
+				<div class="grid__box grid__box--last">
+					<p class="info">
+						<span class="info__text">
+							Feito com <span class="info__heart">&#10084;</span> pela Quero Educação
+						</span>
 
-					<span class="info__text">
-						Rede Alumni Serviços de Internet Ltda &copy; 2011 - 2016 <br> CNPJ:10.542.212/0001-54
-					</span>
-				</p>
+						<span class="info__text">
+							Rede Alumni Serviços de Internet Ltda &copy; 2011 - 2016 <br> CNPJ:10.542.212/0001-54
+						</span>
+					</p>
+				</div>
 			</div>
-		</div>
+		<!--desktop-->
+
+		<!---->
+
+
 	</footer>
 
 
