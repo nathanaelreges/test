@@ -17,9 +17,15 @@ section, article, aside, footer, header, nav {
 }
 
 
-.grid-1 {
+.grid{
+    padding: 0 15px;
+}
+
+
+.grid--header {
     box-shadow: 0 1px 10px 0 rgba(0,0,0,0.5);
     position: relative;
+    padding: 0;/*unseting default padding to use padding inside the clickable element instead*/
 }
     .header {
         display: flex;
@@ -38,6 +44,7 @@ section, article, aside, footer, header, nav {
             .header__link {
                 display: flex;
                 flex-direction: column;
+                padding: 0 15px;
                 align-items: center;
                 justify-content: center;
                 color: dimgrey;
@@ -45,17 +52,15 @@ section, article, aside, footer, header, nav {
             }
 
                 .header__link--help {
-                    width: 60px;
                     margin-right: auto;
                     border-right: 1px solid lightgray;
                 }
 
                 .header__link--home {
-                    
+                    padding: 0;
                 }
 
                 .header__link--login {
-                    width: 60px;
                     margin-left: auto;
                     border-left: 1px solid lightgray;
                 }
@@ -80,7 +85,7 @@ section, article, aside, footer, header, nav {
                 }
 
                 .header__link-text {
-                    padding: 3px;
+                    padding: 3px 0;
                     font-size: 0.9rem;
                 }
 
@@ -95,9 +100,10 @@ section, article, aside, footer, header, nav {
 
 
 
-.grid-2 {
+.grid--topnav {
     background: rgb(14,153,176);
     box-shadow: inset 0 -10px 10px -9px rgba(0,0,0,0.5);
+    padding: 0;/*unseting default padding to use padding inside the clickable element instead*/
 }
 
     .topnav {
@@ -136,7 +142,7 @@ section, article, aside, footer, header, nav {
 
 
 .brief {
-    padding: 30px 15px 0;
+    padding: 30px 0 0;
     overflow: hidden;/*fix margin collapse*/
 }
     .brief__title {
@@ -152,14 +158,14 @@ section, article, aside, footer, header, nav {
 /**/
 
 
-.grid-4 {
+.grid--guide-form {
     background: rgb(250,250,250);
     border-bottom: 1px solid lightgrey;
     margin-bottom: 45px;
 }
 
     .guide {
-        padding: 15px;
+        padding: 15px 0;
     }
         
         .guide__title {
@@ -254,7 +260,6 @@ section, article, aside, footer, header, nav {
     /**/
 
     .form {
-        margin: 0px 15px;
         transform: translateY(30px);
         border: 1.1px solid lightgrey;
         border-radius: 5px;
@@ -347,143 +352,141 @@ section, article, aside, footer, header, nav {
 
 /**/
 
-/*share*/
-    .share {
-        padding: 15px;
+
+.share {
+    padding: 15px 0;
+}
+    .share__title {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: rgb(49,49,49);
+        margin: 0;
     }
-        .share__title {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: rgb(49,49,49);
+
+    .share__l-row {
+        overflow: hidden;/*fix margin collapse*/
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+        .share__l-row--first {
+            border-bottom: 1px solid lightgrey;
+            padding-top: 17px;
+        }
+
+        .share__title2 {
+            font-weight: 700;
+            line-height: 1.5rem;
+            font-size: 1.1rem;
             margin: 0;
         }
 
-        .share__l-row {
-            overflow: hidden;/*fix margin collapse*/
-            padding-top: 25px;
-            padding-bottom: 20px;
+        .share__link-box {
+            display: inline-flex;
+            flex-direction: column;
+            margin-right: 30px;
+            margin-top: 20px;
         }
 
-            .share__l-row--first {
-                border-bottom: 1px solid lightgrey;
-                padding-top: 17px;
+            .share__link-box--last{
+                margin-right: 0;
             }
 
-            .share__title2 {
-                font-weight: 700;
-                line-height: 1.5rem;
-                font-size: 1.1rem;
+            .share__title3 {
+                display: inline;
+                font-size: 0.9rem;
+                font-weight: 400;
                 margin: 0;
             }
 
-            .share__link-box {
-                display: inline-flex;
-                flex-direction: column;
-                margin-right: 30px;
-                margin-top: 20px;
+            .share__l-link{
+                margin-top: 10px;
             }
+                .share__link {
+                    display: inline-block;
+                    border: 1px solid lightgrey;
+                    border-radius: 35px;
+                    height: 45px;
+                    width: 45px;
+                    margin-right: 10px;
+                }
 
-                .share__link-box--last{
+                .share__link--last {
                     margin-right: 0;
                 }
-
-                .share__title3 {
-                    display: inline;
-                    font-size: 0.9rem;
-                    font-weight: 400;
-                    margin: 0;
-                }
-
-                .share__l-link{
-                    margin-top: 10px;
-                }
-                    .share__link {
-                        display: inline-block;
-                        border: 1px solid lightgrey;
-                        border-radius: 35px;
-                        height: 45px;
-                        width: 45px;
-                        margin-right: 10px;
-                    }
-
-                    .share__link--last {
-                        margin-right: 0;
-                    }
-                
-                /**/
-
-            /**/
-
-            .share__form {
-                padding-top: 20px;
-                margin-bottom: 10px;
-            }
-
-                .share__label {
-                    margin: 0;
-                    line-height: 1.6rem; 
-                }
-
-                .share__l-field {
-                    display: flex;
-                    align-items: center;
-                    margin-top: 5px;
-                    padding-left: 13px;
-                    height: 40px;
-                    border: 1px solid lightgrey;
-                    border-radius: 5px;
-                    overflow: hidden;
-                }
-                
-                    .share__field {
-                        font-family: 'Montserrat', sans-serif;
-                        padding: 0;
-                        flex-grow: 1;
-                        border: none;
-                        outline: none;
-                    }
-
-                        .share__field::placeholder {   
-                            color: rgb(210, 210, 210);
-                        }
-                        
-                        .share__field:-ms-input-placeholder{
-                            color: rgb(210, 210, 210);
-                        }
-                    
-                    /**/
-
-                    .share__button {
-                        font-family: 'Montserrat', sans-serif;
-                        height: 100%;
-                        width: 72px;
-                        background: rgb(250, 250, 250);
-                        border: none;
-                        border-left: 1px solid lightgrey;
-                        outline: none;
-                        color: rgb(222, 158, 32);
-                        font-weight: 600;
-                    }
-
-                /**/
-
-                .share__tip {
-                    margin: 7px 0 0 0;
-                    font-size: 0.75rem;
-                    font-style: italic;
-                }
-
+            
             /**/
 
         /**/
-    
+
+        .share__form {
+            padding-top: 20px;
+            margin-bottom: 10px;
+        }
+
+            .share__label {
+                margin: 0;
+                line-height: 1.6rem; 
+            }
+
+            .share__l-field {
+                display: flex;
+                align-items: center;
+                margin-top: 5px;
+                padding-left: 13px;
+                height: 40px;
+                border: 1px solid lightgrey;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+            
+                .share__field {
+                    font-family: 'Montserrat', sans-serif;
+                    padding: 0;
+                    flex-grow: 1;
+                    border: none;
+                    outline: none;
+                }
+
+                    .share__field::placeholder {   
+                        color: rgb(210, 210, 210);
+                    }
+                    
+                    .share__field:-ms-input-placeholder{
+                        color: rgb(210, 210, 210);
+                    }
+                
+                /**/
+
+                .share__button {
+                    font-family: 'Montserrat', sans-serif;
+                    height: 100%;
+                    width: 72px;
+                    background: rgb(250, 250, 250);
+                    border: none;
+                    border-left: 1px solid lightgrey;
+                    outline: none;
+                    color: rgb(222, 158, 32);
+                    font-weight: 600;
+                }
+
+            /**/
+
+            .share__tip {
+                margin: 7px 0 0 0;
+                font-size: 0.75rem;
+                font-style: italic;
+            }
+
+        /**/
+
     /**/
 
 /**/
 
-
-.grid-6{
+.grid--contact{
     background: rgb(23, 172, 196);
+    padding: 0;
 }
 
     .contact {
@@ -505,8 +508,9 @@ section, article, aside, footer, header, nav {
             }
 
             .contact__link {
+                padding: 0 15px;
                 flex-grow: 1;
-                width: 65px;
+                width: 70px;
                 height: 70px;
                 display: flex;
                 flex-direction: column;
@@ -520,7 +524,9 @@ section, article, aside, footer, header, nav {
                 .contact__link--phone {
                     flex-direction: row;
                     border-left: none;
+                    flex-grow: 1;
                     width: unset;
+                    padding-right: 5px;
                 }
 
                 .contact__img {
@@ -531,11 +537,10 @@ section, article, aside, footer, header, nav {
                     border-radius: 25px;
                 }
 
-                
 
                 .contact__text {
-                    transform: translateX(-0.5rem);/*ajusting to center text excluding the dot*/
                     font-size: 0.88rem;
+                    position: relative;
                 }
 
                     .contact__text--phone {
@@ -556,16 +561,18 @@ section, article, aside, footer, header, nav {
                     }
 
                     .contact__dot {
-                        vertical-align: baseline;
                         display: inline-block;
                         height: 0.6rem;
                         width: 0.6rem;
                         border-radius: 10px;
+                        position: absolute;
+                        top: 0.2rem;
+                        left: -0.76rem;
                     }
 
                         .contact__dot--phone {
                             background: rgb(221,63,78);
-                            
+                            position: unset;
                         }
                         
                         .contact__dot--chat {
@@ -593,15 +600,14 @@ section, article, aside, footer, header, nav {
 /**/
 
 
-.grid-7 {
+.grid--botnav {
     background: rgb(5, 134, 155);
     text-align: center;
 }
 
     .botnav {
-        list-style: none;
         margin: 0;
-        padding: 15px 0 10px 0;
+        padding: 15px 0;
         font-size: 0.6rem;
         font-weight: 400;
     }
@@ -612,18 +618,18 @@ section, article, aside, footer, header, nav {
 
             .botnav__item::before {
                 content: " ";
+                white-space: nowrap;
             }
 
             .botnav__item::after {
                 content: " ";
                 white-space: normal;
-                word-spacing: 1em;
-                border-right: 1px solid white;
+                background: linear-gradient(90deg, white 1px, transparent 1px);
             }
 
-            .botnav__item--last::after {
+            /*.botnav__item--last::after {
                 border: none;
-            }
+            }*/
               
             .botnav__link {
                 color: white;
@@ -643,11 +649,11 @@ section, article, aside, footer, header, nav {
 
 
 
-.grid-8{
+.grid--last{
     background: rgb(0, 111, 138)
 }
 
-    .grid-8__box {
+    .l-last {
         display: flex;
         flex-direction: column;
     }
@@ -730,3 +736,37 @@ section, article, aside, footer, header, nav {
     /**/
 
 /**/
+
+
+@media (max-width: 900px) {
+    .desktop {
+        display: block;
+    }
+}
+
+@media (min-width: 900px) {
+    .mobile {
+       /* display: none;*/
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .grid-box{
+        max-width: 1010px;
+        margin: auto;
+    }
+
+    .grid-4 {
+        display: flex;
+        justify-content: center;
+    }
+
+        .guide, .form {
+            max-width: 505px;
+        }
+
+    /**/
+
+}

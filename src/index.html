@@ -27,22 +27,27 @@
 
 <body>
     
-    <header class="grid-1">
+    <header class="grid grid--header">
         <div class="header">
-            <div class="header__l-link">
-                <a class="header__link header__link--help" role="button" href="#help">
-                    <div class="header__help-img"></div>
-                    <span class="header__link-text">
-                        Ajuda
-                    </span>
-                </a>    
-            </div>
+            <!--mobile-->
+                <div class="header__l-link mobile">
+                    <a class="header__link header__link--help" role="button" href="#help">
+                        <div class="header__help-img"></div>
+                        <span class="header__link-text">
+                            Ajuda
+                        </span>
+                    </a>    
+                </div>
+            <!--desktop-->
+
+
+            <!---->
             <div class="header__l-link header__l-link--home">
                 <a class="header__link header__link--home" role="button" title="Home" href="#home">
                     <div class="header__home-img"></div>
                 </a>    
             </div>    
-            <div class="header__l-link">
+            <div class="header__l-link mobile">
                 <a class="header__link header__link--login" role="button" href="#login">
                     <div class="header__login-img"></div>
                     <span class="header__link-text">
@@ -53,7 +58,7 @@
         </div>
     </header>
 
-    <nav class="grid-2">
+    <nav class="grid grid--topnav">
         <div class="topnav">
             <a class="topnav__link topnav__link--myacount" role="button" href="#myacount">
                 <span>MINHA CONTA</span>
@@ -65,7 +70,7 @@
     </nav>
 
     <main>
-        <div class="grid-3">
+        <div class="grid grid--brief">
             <div class="brief">
                 <h1 class="brief__title">
                     Quero Bolsa Indica
@@ -76,8 +81,8 @@
             </div>
         </div>
 
-        <div class="grid-4">
-            <article class="grid-4_l1">
+        <div class="grid grid--guide-form">
+            <article class="l-guide-form">
                 <div class="guide">
                     <hgroup>
                         <h1 class="guide__title">
@@ -201,7 +206,7 @@
         </div>
     </main>
 
-    <div class="grid-5">
+    <div class="grid grid--share">
         <div class="share">
             <h1 class="share__title">
                 Indique o quero bolsa para seus amigos
@@ -276,7 +281,7 @@
 
 
     <footer>
-        <nav class="grid-6">
+        <nav class="grid grid--contact">
             <ul class="contact">
                 <li class="contact__item contact__item--phone">
                     <a class="contact__link contact__link--phone" href="#phone">
@@ -320,57 +325,24 @@
             </ul>
         </nav>
 
-        <nav class="grid-7">
+        <nav class="grid grid--botnav">
             <ul class="botnav">
-                <li class="botnav__item">
-                    <a class="botnav__link" href="">
-                        Central de Ajuda
-                    </a>
-                </li>
-                <li class="botnav__item">
-                    <a class="botnav__link" href="">
-                        Vs Educa Mais Brasil
-                    </a>
-                </li>
-                <li class="botnav__item">
-                    <a class="botnav__link" href="">
-                        Vs Mais Estudo
-                    </a>
-                </li>
-                <li class="botnav__item">
-                    <a class="botnav__link" href="">
-                        Mapa de Faculdades
-                    </a>
-                </li>
-                <li class="botnav__item">
-                    <a class="botnav__link" href="">
-                        Mapa de Cursos
-                    </a>
-                </li>
-                <li class="botnav__item">
-                    <a class="botnav__link" href="">
-                        Revista QB
-                    </a>
-                </li>
-                <li class="botnav__item">
-                    <a class="botnav__link" href="">
-                        Guia de Programas do Governo
-                    </a>
-                </li>
-                <li class="botnav__item">
-                    <a class="botnav__link" href="">
-                        Trabalhe Conosco
-                    </a>
-                </li>
-                <li class="botnav__item botnav__item--last">
-                    <a class="botnav__link" href="">
-                        Imprensa
-                    </a>
-                </li>
+                <!--We are using white space trailing to get read of the line between links on each line end,
+                    in order for this to work there can't be any white space here-->
+                <li class="botnav__item"><a class="botnav__link" href="">Central de Ajuda</a></li>
+                <li class="botnav__item"><a class="botnav__link" href="">Vs Educa Mais Brasil</a></li>
+                <li class="botnav__item"><a class="botnav__link" href="">Vs Mais Estudo</a></li>
+                <li class="botnav__item"><a class="botnav__link" href="">Mapa de Faculdades</a></li>
+                <li class="botnav__item"><a class="botnav__link" href="">Mapa de Cursos</a></li>
+                <li class="botnav__item"><a class="botnav__link" href="">Revista QB</a></li>
+                <li class="botnav__item"><a class="botnav__link" href="">Guia de Programas do Governo</a></li>
+                <li class="botnav__item"><a class="botnav__link" href="">Trabalhe Conosco</a></li>
+                <li class="botnav__item"><a class="botnav__link" href="">Imprensa</a></li>
             </ul>
         </nav>
-        <div class="grid-8">
-            <div class="grid-8__box">
+        
+        <div class="grid grid--last">
+            <div class="l-last">
                 <div class="security">
                     <div class="security__img security__img--safe-site" title="Site Seguro"></div>
                     <div class="security__img security__img--visa" title="Pague com Visa"></div>
