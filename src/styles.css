@@ -12,13 +12,21 @@ body {
 	box-sizing: border-box;
 }
 
+
+
+.js-template {
+	display: none;
+}
+
 section, article, aside, footer, header, nav {
 	display: block;
 }
 
 
-.grid__box{
+.grid__box {
 	padding: 0 15px;
+	max-width: 600px;
+	margin: 0 auto;
 }
 
 
@@ -141,6 +149,14 @@ section, article, aside, footer, header, nav {
 			border: none;
 			outline: none;
 		}
+
+			.topnav__arrow {
+				width: 10px;
+				margin: 2px 0 0 5px;
+				stroke: white;
+			}
+
+		/**/
 
 	/**/
 
@@ -278,36 +294,59 @@ section, article, aside, footer, header, nav {
 	}
 
 		.form__title{
-			margin-top: 0;
+			margin: 0 0 20px 0;
 			color: rgb(49,49,49);
 			font-size: 1.4rem;
 			font-weight: 800;
 		}
 		
 		.form__brief{
-			margin: 18px 0;
+			margin: 0  0 20px 0;
 		}
 
 		.form__l-row {
 			display: flex;
 			flex-direction: column;
-			margin-bottom: 10px;
+			padding-bottom: 15px;
 		}
 
 			.form__label {
-				margin: 3px 0 3px 1px;
+				margin: 0 0 3px 1px;
 				font-size: 0.75rem;
 				font-weight: 600;
 			}
 
-			.form__input {
-				font-family: 'Montserrat', sans-serif;
-				padding-left: 13px;
-				display: block;
-				height: 40px;
-				border: 1px solid lightgrey;
-				border-radius: 5px;
+			.form__l-input{
+				position: relative;
 			}
+
+				.form__input {
+					font-family: 'Montserrat', sans-serif;
+					padding-left: 15px;
+					display: block;
+					height: 40px;
+					width: 100%;
+					border: 1px solid lightgrey;
+					border-radius: 5px;
+					outline: none;
+				}
+
+					.form__input:focus {
+						border-color: rgb(222, 158, 32);
+					}
+
+				/**/
+
+				.form__arrow {
+					position: absolute;
+					right: 15px;
+					top: 15px;
+					width: 10px;
+					stroke: dimgray;
+					pointer-events: none;
+				}
+
+			/**/
 			
 			.form__button {
 				font-family: 'Montserrat', sans-serif;
@@ -329,7 +368,7 @@ section, article, aside, footer, header, nav {
 				color: rgb(222, 158, 32);
 				align-self: center;
 				font-size: 0.9rem;
-				margin: 3px;
+				margin-bottom: 3px;
 			}
 		
 		/**/ 
@@ -442,8 +481,7 @@ section, article, aside, footer, header, nav {
 				display: flex;
 				align-items: center;
 				margin-top: 5px;
-				padding-left: 13px;
-				height: 40px;
+				
 				border: 1px solid lightgrey;
 				border-radius: 5px;
 				overflow: hidden;
@@ -451,9 +489,10 @@ section, article, aside, footer, header, nav {
 			
 				.share__field {
 					font-family: 'Montserrat', sans-serif;
-					padding: 0;
+					height: 40px;
+					padding-left: 15px;
 					flex-grow: 1;
-					border: none;
+					border: 1px solid white;
 					outline: none;
 				}
 
@@ -464,19 +503,29 @@ section, article, aside, footer, header, nav {
 					.share__field:-ms-input-placeholder{
 						color: rgb(210, 210, 210);
 					}
-				
+
+					.share__field:focus {
+						border: 1px solid rgb(222, 158, 32);
+						border-radius: 5px;
+					}
+
 				/**/
+				
+				.share__text {
+					padding-left: 15px;
+					flex-grow: 1;
+				}
 
 				.share__button {
 					font-family: 'Montserrat', sans-serif;
-					height: 100%;
+					color: rgb(222, 158, 32);
+					font-weight: 600;
+					height: 40px;
 					width: 72px;
 					background: rgb(250, 250, 250);
 					border: none;
 					border-left: 1px solid lightgrey;
 					outline: none;
-					color: rgb(222, 158, 32);
-					font-weight: 600;
 				}
 
 			/**/
@@ -682,13 +731,14 @@ section, article, aside, footer, header, nav {
 			flex-wrap: wrap;
 			align-items: center;
 			justify-content: center;
-			padding: 15px 0;
+			padding: 10px 0;
 		}
 
 			.security__img {
 				width:  40px;
 				height: 25px;
-				margin-left: 4px;
+				/*not using only margin bottom beacuse it may wrap*/
+				margin: 2.5px 2px; 
 				background: darkgray;
 				flex-shrink: 0;
 			}
@@ -759,7 +809,7 @@ section, article, aside, footer, header, nav {
 
 @media (max-width: 1015px) {
 	.if-desktop {
-		display: none   ;
+		display: none;
 	}
 }
 
@@ -784,6 +834,9 @@ section, article, aside, footer, header, nav {
 		}
 		
 		.form {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
 			margin-left: 25px;
 		}
 
@@ -898,7 +951,7 @@ section, article, aside, footer, header, nav {
 				font-weight: 400;
 			}
 
-			.topnav-d__link--on {
+			.topnav-d__link--active {
 				background: rgba(255,255,255,0.2)
 			}
 

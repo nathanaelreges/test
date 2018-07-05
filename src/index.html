@@ -92,6 +92,7 @@
 				<!--mobile-->
 					<button class="if-mobile topnav__button topnav__link">
 						Menu
+						<div class="js-arrow topnav__arrow"></div>
 					</button>
 				<!--desktop-->
 					<div class="if-desktop topnav-d__l-links">
@@ -107,7 +108,7 @@
 						<a class="topnav-d__link" href="#acount">
 							<span>Contas e preferências</span>
 						</a>
-						<a class="topnav-d__link topnav-d__link--on" href="#qbindica">
+						<a class="topnav-d__link topnav-d__link--active" href="#qbindica">
 							<span>Quero Bolsa Indica</span>
 						</a>
 					</div>
@@ -215,14 +216,22 @@
 							<label class="form__label" for="situacao">
 								SITUAÇÃO
 							</label>
-							<input type="text" class="form__input" name="situacao" placeholder="Vou me matricular esse semestre">
+							<div class="form__l-input">
+								<input type="text" class="form__input" name="situacao" 
+								placeholder="Vou me matricular esse semestre">
+								<div class="js-arrow form__arrow"></div>
+							</div>
 						</div>
 
 						<div class="form__l-row">
 							<label class="form__label" for="instituicao">
 								INSTITUIÇÃO DE ENSINO
 							</label>
-							<input type="text" class="form__input" name="instituicao" placeholder="Escolha a universidade">
+							<div class="form__l-input">
+								<input type="text" class="form__input" name="instituicao" 
+								placeholder="Escolha a universidade">
+								<div class="js-arrow form__arrow"></div>
+							</div>
 						</div>
 
 
@@ -319,7 +328,7 @@
 							</p>
 
 							<div class="share__l-field">
-								<div class="share__field">
+								<div class="share__text">
 									https://que.bo/qibgkzczi7
 								</div>
 								<button class="share__button" type="button">
@@ -641,7 +650,26 @@
 		<!---->
 	</footer>
 
+	<svg class="js-template js-arrow-template" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" 
+		version="1.1" viewBox="0.0 0.0 250.0 250.0" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10">
+		<g clip-path="url(#g3a42f22aad_0_0.0)">
+			<path stroke="unset" stroke-width="34.0" stroke-linejoin="round" stroke-linecap="butt"
+				d="m237.17455 67.26206l-112.4059 115.47808l-111.9441 -115.00609" fill-rule="evenodd"/>
+		</g>
+	</svg>
+
 </body>
+
+
+<script>
+	var jsArrowTemplate = document.querySelector('.js-arrow-template')
+	document.querySelectorAll('.js-arrow').forEach(function (ele) {
+		var arrowEleClone = jsArrowTemplate.cloneNode(true)
+		ele.classList.remove('js-arrow')
+		arrowEleClone.classList.value = ele.className
+		ele.parentElement.replaceChild(arrowEleClone, ele)
+	})
+</script>
 
 </html>
 
