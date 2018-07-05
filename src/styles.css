@@ -341,6 +341,7 @@ section, article, aside, footer, header, nav {
 					position: absolute;
 					right: 15px;
 					top: 15px;
+					height: 10px;
 					width: 10px;
 					stroke: dimgray;
 					pointer-events: none;
@@ -586,7 +587,7 @@ section, article, aside, footer, header, nav {
 					flex-direction: row;
 					border-left: none;
 					flex-grow: 1;
-					width: unset;
+					width: auto;
 					padding-right: 5px;
 				}
 
@@ -639,7 +640,7 @@ section, article, aside, footer, header, nav {
 
 						.contact__dot--phone {
 							background: rgb(221,63,78);
-							position: unset;
+							position: static;
 						}
 						
 						.contact__dot--chat {
@@ -857,7 +858,7 @@ section, article, aside, footer, header, nav {
 		}
 
 		.share__box--first {
-			border-bottom: unset;
+			border-bottom: 0;
 		}
 		
 		.share__box--last {
@@ -1013,7 +1014,7 @@ section, article, aside, footer, header, nav {
 
 					.contact-d__dot--phone {
 						background: rgb(221,63,78);
-						position: unset;
+						position: static;
 					}
 					
 					.contact-d__dot--chat {

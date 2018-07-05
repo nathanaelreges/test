@@ -9,7 +9,6 @@
 	<meta charset="utf-8">
 	<meta name="theme-color" content="#B27DFF">
 
-	<meta property="og:image" content="img/siteimg.jpg">
 	<meta property="og:title" content="Quero Bolsa">
 	<meta property="og:site_name" content="QueroBolsa">
 	<meta property="og:url" content="https://querobolsa.com.br/">
@@ -146,7 +145,7 @@
 						</hgroup>
 
 						<p class="guide__text">
-							Aqui está a sua chance de ter mensalidades da sua faculdade pagas pelo programa de inidcação do Quero Bolsa.
+							Aqui está a sua chance de ter mensalidades da sua faculdade pagas pelo programa de indicação do Quero Bolsa.
 							<br>
 							Indique amigos, acumule pontos e troque pelo pagamento das suas mensalidades!
 						</p>
@@ -229,7 +228,7 @@
 							</label>
 							<div class="form__l-input">
 								<input type="text" class="form__input" name="instituicao" 
-								placeholder="Escolha a universidade">
+								placeholder="Escolha uma universidade">
 								<div class="js-arrow form__arrow"></div>
 							</div>
 						</div>
@@ -270,7 +269,7 @@
 		<div class="grid__box grid__box--share">
 			<div class="share">
 				<h1 class="share__title">
-					Indique o quero bolsa para seus amigos
+					Indique o Quero Bolsa para seus amigos
 				</h1>
 
 				<div class="share__l-boxes">
@@ -307,7 +306,7 @@
 
 						<form class="share__form" action="" method="POST">
 							<label class="share__label">
-								Digite o email das pessoal que você quer enviar o convite
+								Digite o e-mail das pessoas que você quer enviar o convite
 							</label>
 
 							<div class="share__l-field">
@@ -565,7 +564,7 @@
 						</span>
 
 						<span class="info__text">
-							Rede Alumni Serviços de Internet Ltda &copy; 2011 - 2016 <br> CNPJ:10.542.212/0001-54
+							Rede Alumni Serviços de Internet Ltda &copy; 2011 - 2016 <br> CNPJ: 10.542.212/0001-54
 						</span>
 					</p>
 				</div>
@@ -663,12 +662,15 @@
 
 <script>
 	var jsArrowTemplate = document.querySelector('.js-arrow-template')
-	document.querySelectorAll('.js-arrow').forEach(function (ele) {
+	var arrayOfEles = document.querySelectorAll('.js-arrow')
+	
+	for (var i = 0; i < arrayOfEles.length; i++) {
+		var ele = arrayOfEles[i]
 		var arrowEleClone = jsArrowTemplate.cloneNode(true)
 		ele.classList.remove('js-arrow')
-		arrowEleClone.classList.value = ele.className
+		arrowEleClone.setAttribute('class', ele.className)
 		ele.parentElement.replaceChild(arrowEleClone, ele)
-	})
+	}
 </script>
 
 </html>
