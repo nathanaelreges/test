@@ -4,13 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "browser-sync start --server src --files src"
+    "dev": "browser-sync start --server src --files src",
+    "dev2": "webpack --config ./config/webpack.dev.js"
   },
   "keywords": [],
   "author": "Nathanael Reges Sousa",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.24.5"
+    "browser-sync": "^2.24.5",
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
   },
   "dependencies": {}
 }
