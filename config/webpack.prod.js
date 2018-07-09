@@ -1,18 +1,22 @@
-module.exoprts = {
+module.exports = {
    entry: './src/app.js',
    output: {
-       path: __dirname + '/dist',
+       path: __dirname + '/.././dist',
        filename: 'bundle.js'
    },
-   mode: "development",
+   mode: 'production',
    module: {
       rules: [{
          test: /\.scss$/,
          use:[
-            "style-loader", // creates style nodes from JS strings
-            "css-loader", // translates CSS into CommonJS
-            "sass-loader" // compiles Sass to CSS
+            'style-loader', // creates style nodes from JS strings
+            'css-loader', // translates CSS into CommonJS
+            'sass-loader' // compiles Sass to CSS
          ]
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       }]
    }
 }
