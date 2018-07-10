@@ -1,0 +1,71 @@
+@import 'utils';
+
+
+@media (min-width: 1015px) {
+
+	//GUIDE-FORM
+		.grid__box--guideform {
+			display: flex;
+		}
+
+		.guide, .form {
+			flex-basis: 50%;
+		}
+		
+		.form {
+			margin-left: 25px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+	//
+
+	//SHARE
+	.share {
+		&__title {
+			padding-bottom: 15px;
+			border-bottom: 1px solid lightgrey;
+		}
+
+		&__l-boxes {
+			display: flex;
+		}
+
+		&__box {
+			flex-basis: 50%;
+			
+			&--first {
+				border-bottom: 0;
+			}
+			
+			&--last {
+				margin-left: 25px;
+			}
+		}
+	}
+
+
+	//topnav
+	.topnav {
+		white-space: nowrap;
+
+		&-d__l-links {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&-d__link {
+			height: 45px;
+			padding: 0 20px;
+			display: inline-flex;
+			align-items: center;
+			font-weight: 400;
+			color: white;
+			text-decoration: none;
+			
+			&--active {
+				background: rgba(255,255,255,0.2);
+			}
+		}
+	}
+}

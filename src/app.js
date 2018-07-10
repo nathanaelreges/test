@@ -1,2 +1,1 @@
-require('./stylessass.scss')
-require('./styles.css')
+require('./styles/global.scss')
