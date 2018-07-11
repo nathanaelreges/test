@@ -1,25 +1,38 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
    entry: './src/app.js',
    output: {
-       path: __dirname + '/.././dist',
-       filename: 'bundle.js'
+      path: __dirname + '/.././dist',
+      filename: 'bundle.js'
    },
    mode: "development",
    devServer: {
-       contentBase: './dist'
+      contentBase: './dist'
    },
    module: {
       rules: [{
          test: /\.scss$/,
-         use:[
-            "style-loader", // creates style nodes from JS strings
-            "css-loader", // translates CSS into CommonJS
-            "sass-loader" // compiles Sass to CSS
-         ]
-      },{
-        test: /\.css$/,
-        loader: "style-loader!css-loader"
-      }
-    ]
-   }
+         use: [{
+            loader: MiniCssExtractPlugin.loader
+         },
+         {
+            loader: 'css-loader'// translates CSS into CommonJS
+         },
+         {
+            loader: 'sass-loader',// compiles Sass to CSS
+            options: {
+               outputStyle: 'expanded'
+            }
+         }]
+      }]
+   },
+   plugins: [
+      new MiniCssExtractPlugin({
+         // Options similar to the same options in webpackOptions.output
+         // both options are optional
+         path: __dirname + '/.././dist',
+         filename: "styles.css"
+      })
+   ]
 }

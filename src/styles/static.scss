@@ -2,77 +2,77 @@
 
 //HEADER
 .grid--header {
-	position: relative;/*So the shadow casts on top of the lower element*/
-	box-shadow: 0 1px 10px 0 rgba(0,0,0,0.5);
+   position: relative;/*So the shadow casts on top of the lower element*/
+   box-shadow: 0 1px 10px 0 rgba(0,0,0,0.5);
 }
 
 .grid__box--header {
-	padding: 0;/*unseting default padding (applied through .grid__box) to use padding inside the clickable element instead*/
+   padding: 0;/*unseting default padding (applied through .grid__box) to use padding inside the clickable element instead*/
 }
 
 .header {
-	height: 60px;
-	display: flex;
-	
-	&__l-link {
-		flex-grow: 1;
-		display: flex;
-	
-		&--home {
-			flex-grow: 0;
-		}
-	}
+   height: 60px;
+   display: flex;
+   
+   &__l-link {
+      flex-grow: 1;
+      display: flex;
+   
+      &--home {
+         flex-grow: 0;
+      }
+   }
 
-	&__link {
-		padding: 0 15px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		color: $text-color;
-		text-decoration: none;
-		
-		&--help {
-			margin-right: auto;
-			border-right: 1px solid lightgray;
-		}
-	
-		&--home {
-			padding: 0;
-		}
-	
-		&--login {
-			margin-left: auto;
-			border-left: 1px solid lightgray;
-		}
-	}
+   &__link {
+      padding: 0 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $text-color;
+      text-decoration: none;
+      
+      &--help {
+         margin-right: auto;
+         border-right: 1px solid lightgray;
+      }
+   
+      &--home {
+         padding: 0;
+      }
+   
+      &--login {
+         margin-left: auto;
+         border-left: 1px solid lightgray;
+      }
+   }
 
-	&__help-img {
-		height: 25px;
-		width: 25px;
-		border-radius: 100%;
-		background-color: $yellow;
-	}
+   &__help-img {
+      height: 25px;
+      width: 25px;
+      border-radius: 100%;
+      background-color: $yellow;
+   }
 
-	&__home-img {
-		height: 40px;
-		width: 130px;
-		padding: 0 10px;
-		border-radius: 10px;
-		background-color: $yellow;
-	}
-	
-	&__login-img {
-		height: 25px;
-		width: 25px;
-		border-radius: 100%;
-		background-color: $yellow;
-	}
+   &__home-img {
+      height: 40px;
+      width: 130px;
+      padding: 0 10px;
+      border-radius: 10px;
+      background-color: $yellow;
+   }
+   
+   &__login-img {
+      height: 25px;
+      width: 25px;
+      border-radius: 100%;
+      background-color: $yellow;
+   }
 
-	&__link-text {
-		padding: 3px 0;
-		font-size: 0.9rem;
-	}
+   &__link-text {
+      padding: 3px 0;
+      font-size: 0.9rem;
+   }
 
 }
 
@@ -80,111 +80,111 @@
 
 ///CONTACT
 .grid--contact{
-	background: $green-lv1;
+   background: $green-lv1;
 }
 
 .grid__box--contact{
-	padding: 0;/*unseting default padding (applied through .grid__box) to use padding inside the clickable element instead*/
+   padding: 0;/*unseting default padding (applied through .grid__box) to use padding inside the clickable element instead*/
 }
 
 .contact {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   list-style: none;
 
-	&__item {
-		display: flex;
-		flex-grow: 1;
-		flex-shrink: 0;
+   &__item {
+      display: flex;
+      flex-grow: 1;
+      flex-shrink: 0;
 
-		&--phone {
-			flex-grow: 2;
-		}
-	}
+      &--phone {
+         flex-grow: 2;
+      }
+   }
 
-	&__link {
-		padding: 0 15px;
-		flex-grow: 1;
-		width: 70px;
-		height: 70px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-decoration: none;
-		color: white;
-		border-left: 1px solid $green-lv2;
-		
-		&--phone {
-			padding-right: 5px;
-			flex-grow: 1;
-			width: auto;
-			flex-direction: row;
-			border-left: none;
-		}
-	}
+   &__link {
+      padding: 0 15px;
+      flex-grow: 1;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      border-left: 1px solid $green-lv2;
+      
+      &--phone {
+         padding-right: 5px;
+         flex-grow: 1;
+         width: auto;
+         flex-direction: row;
+         border-left: none;
+      }
+   }
 
-	&__img {
-		margin-bottom: 5px;
-		width:  25px;
-		height: 25px;
-		border: 1px solid white;
-		border-radius: 25px;
+   &__img {
+      margin-bottom: 5px;
+      width:  25px;
+      height: 25px;
+      border: 1px solid white;
+      border-radius: 25px;
 
-		&--phone {
-			margin: 0 5px 0 0;
-		}
-	}
+      &--phone {
+         margin: 0 5px 0 0;
+      }
+   }
 
-	&__text {
-		position: relative;
-		font-size: 0.88rem;
-		font-weight: 400;
-		
-		&--phone {
-			transform: none;
-			display: flex;
-			flex-direction: column;   
-		}
+   &__text {
+      position: relative;
+      font-size: 0.88rem;
+      font-weight: 400;
+      
+      &--phone {
+         transform: none;
+         display: flex;
+         flex-direction: column;   
+      }
 
-		&--chat {
-			font-style: italic;
-		}
-	}
+      &--chat {
+         font-style: italic;
+      }
+   }
 
-	&__phone-under-text{
-		font-size: 0.75rem;
-		font-style: italic;
-	}
+   &__phone-under-text{
+      font-size: 0.75rem;
+      font-style: italic;
+   }
 
-	&__dot {
-		position: absolute;
-		top: 0.2rem;
-		left: -0.76rem;
-		height: 0.6rem;
-		width: 0.6rem;
-		display: inline-block;
-		border-radius: 10px;
+   &__dot {
+      position: absolute;
+      top: 0.2rem;
+      left: -0.76rem;
+      height: 0.6rem;
+      width: 0.6rem;
+      display: inline-block;
+      border-radius: 10px;
 
-		&--phone {
-			position: static;
-			background: rgb(221,63,78);
-		}
-		
-		&--chat {
-			background: rgb(221,63,78);
-		}
-		
-		&--email {
-			background: rgb(101, 239, 128);
-		}
+      &--phone {
+         position: static;
+         background: rgb(221,63,78);
+      }
+      
+      &--chat {
+         background: rgb(221,63,78);
+      }
+      
+      &--email {
+         background: rgb(101, 239, 128);
+      }
 
-		&--info {
-			background: rgb(101, 239, 128);
-		}
-	}
+      &--info {
+         background: rgb(101, 239, 128);
+      }
+   }
 }
 
 
@@ -192,45 +192,45 @@
 
 ///BOTNAV
 .grid--botnav {
-	background: $green-lv2;
+   background: $green-lv2;
 }
 
 .botnav {
-	margin: 0;
-	padding: 15px 0;
-	text-align: center;
-	font-size: 0.6rem;
-	font-weight: 400;
+   margin: 0;
+   padding: 15px 0;
+   text-align: center;
+   font-size: 0.6rem;
+   font-weight: 400;
 
-	&__item {
-		display: inline;
-		
-		&::before {
-			content: " ";
-			white-space: nowrap;
-		}
+   &__item {
+      display: inline;
+      
+      &::before {
+         content: " ";
+         white-space: nowrap;
+      }
 
-		&::after {
-			content: " ";
-			background: linear-gradient(90deg, white 1px, transparent 1px);
-			white-space: normal; 
-			/*
-				We are using this technique so the browser doesn't render the last break on each line.
-				It consists on using a white space as a container for the break.
-				The browser removes any white space left at the end of each line, therefore the break isn't rendered.
-			*/
-		}
-	}
+      &::after {
+         content: " ";
+         background: linear-gradient(90deg, white 1px, transparent 1px);
+         white-space: normal; 
+         /*
+            We are using this technique so the browser doesn't render the last break on each line.
+            It consists on using a white space as a container for the break.
+            The browser removes any white space left at the end of each line, therefore the break isn't rendered.
+         */
+      }
+   }
 
-		
-	&__link {
-		white-space: nowrap;
-		padding: 8px 10px 8px 10px;
-		display: inline-block;
-		font-size: 0.9rem;
-		color: white;
-		text-decoration: none;
-	}
+      
+   &__link {
+      white-space: nowrap;
+      padding: 8px 10px 8px 10px;
+      display: inline-block;
+      font-size: 0.9rem;
+      color: white;
+      text-decoration: none;
+   }
 }
 
 
@@ -239,71 +239,71 @@
 
 //LAST
 .grid--last {
-	border-bottom: 1px solid rgba(255,255,255,0.1);
-	background-color: $green-lv3;
+   border-bottom: 1px solid rgba(255,255,255,0.1);
+   background-color: $green-lv3;
 }
 
 .security{
-	padding: 10px 0;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
+   padding: 10px 0;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
 
-	&__img {
-		/*not using only margin bottom beacuse it may wrap*/
-		margin: 2.5px 2px;
-		flex-shrink: 0;
-		width:  40px;
-		height: 25px; 
-		background: darkgray;
+   &__img {
+      /*not using only margin bottom beacuse it may wrap*/
+      margin: 2.5px 2px;
+      flex-shrink: 0;
+      width:  40px;
+      height: 25px; 
+      background: darkgray;
 
-		&--safe-site {
-			margin-left: 0;
-			width:  105px;
-		}
-	}
+      &--safe-site {
+         margin-left: 0;
+         width:  105px;
+      }
+   }
 }
 
 
 .social {
-	&__list {
-		margin: 0;
-		padding: 10px 0;
-		display: flex;
-		list-style: none;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
+   &__list {
+      margin: 0;
+      padding: 10px 0;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      flex-wrap: wrap;
+   }
 
-	&__item {
-		margin: 0 15px;
-	}
+   &__item {
+      margin: 0 15px;
+   }
 
-	&__img{
-		width:  35px;
-		height: 35px;
-		background: white;
-		border-radius: 25px;
-	}
+   &__img{
+      width:  35px;
+      height: 35px;
+      background: white;
+      border-radius: 25px;
+   }
 }
 
 
 .info {
-	margin: 0;
-	padding: 10px 0 0 0;
-	display: flex;
-	flex-direction: column;
-	font-size: 0.85rem;
-	color: rgba(255,255,255,0.5);
+   margin: 0;
+   padding: 10px 0 0 0;
+   display: flex;
+   flex-direction: column;
+   font-size: 0.85rem;
+   color: rgba(255,255,255,0.5);
 
-	&__heart {
-		vertical-align: middle;
-		font-size: 1rem;
-	}
+   &__heart {
+      vertical-align: middle;
+      font-size: 1rem;
+   }
 
-	&__text {
-		margin-bottom: 10px;
-		text-align: center; 
-	}
+   &__text {
+      margin-bottom: 10px;
+      text-align: center; 
+   }
 }

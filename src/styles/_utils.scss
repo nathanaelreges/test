@@ -4,23 +4,23 @@ $green-lv2: #05869b;
 $green-lv3: #006f8a;
 $title-color: #313131;
 $text-color: dimgrey;
-
+   
 @mixin border {
-	border: 1px solid lightgrey;
-	border-radius: 5px;
+   border: 1px solid lightgrey;
+   border-radius: 5px;
 }
 
 @mixin font {
-	font-family: 'Montserrat', sans-serif;
+   font-family: 'Montserrat', sans-serif;
 }
 
 @mixin heading1 {
-	color: $title-color;
-	font-size: 1.4rem;
-	font-weight: 800;
+   color: $title-color;
+   font-size: 1.4rem;
+   font-weight: 800;
 }
 
 @mixin heading2 {
-	font-size: 1.1rem;
-	font-weight: 700;
+   font-size: 1.1rem;
+   font-weight: 700;
 }
