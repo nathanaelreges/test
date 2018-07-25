@@ -2,7 +2,7 @@
 
 **To execute:**
 
-https://nathanaelreges.github.io/testquero/src/  
+https://nathanaelreges.github.io/testquero/dist
 
 <br/>  
 
